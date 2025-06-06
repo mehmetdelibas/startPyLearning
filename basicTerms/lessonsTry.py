@@ -195,3 +195,52 @@ import random
 #             primeNumbers.append(i)
 # print(primeNumbers)
 # OBEB OKEK
+# list comprehension()=>
+# fruits = ["orange","strawberry","watermelon","cheery","grape"]
+# [print(item) for item in fruits]
+# newList= [item.upper() for item in fruits if("g" in item)]
+# print(newList)
+
+# def myName(**kwargs):
+#     print("his last name is "+kwargs["lastname"])
+# myName(firstname="mehmet",lastname="delibas")
+
+# default içerdeli parameterın degerını atar
+# def myLastName(lastname="Delibas"):
+#     print("My Last Name :"+lastname)
+# myLastName()
+
+def numbersWord(number):
+    ones = ["","bir","iki","üc","dort","bes","alti","yedi","sekiz","dokuz"]
+    tens = ["","on","yirmi","otuz","kırk","elli","altmış","yetmiş","seksen","doksan"]
+    if not 1000<=number <= 9999:
+        return "please enter a 4-digit number"
+    
+    oneDigit = number %10
+    tenDigit = (number // 10) %10
+    hunderedDigit = (number//100) %10
+    thousandDigit = number // 1000
+    resultt = ""
+
+    if thousandDigit>0:
+        if thousandDigit>1:
+            resultt+=f"{ones[thousandDigit]} bin "
+        else:
+            resultt+= "bin "
+    if hunderedDigit>0:
+        if hunderedDigit>1:
+            resultt+=f"{ones[hunderedDigit]} yüz "
+        else:
+            resultt+= "yüz "
+    if tenDigit>0:
+        resultt+= f"{tens[tenDigit]}"+" "
+    if oneDigit>0:
+        resultt+= f"{ones[oneDigit]}"
+    
+    return resultt.strip()
+
+
+
+number = int(input("Enter a 4-digit number"))
+print(numbersWord(number))
+    
