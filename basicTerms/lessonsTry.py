@@ -239,8 +239,5 @@ def numbersWord(number):
     
     return resultt.strip()
 
-
-
 number = int(input("Enter a 4-digit number"))
 print(numbersWord(number))
-    
