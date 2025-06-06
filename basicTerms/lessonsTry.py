@@ -116,9 +116,82 @@ import random
 # x=7
 # print(x:=19)
 
-psw = 12345
-myPsw = int(input("enter psw :"))
-if psw == myPsw:
-    print("succesful")
-else:
-    print("wrong")
+# psw = 12345
+# myPsw = int(input("enter psw :"))
+# if psw == myPsw:
+#     print("succesful")
+# else:
+#     print("wrong")
+# list=> sıralı,degişebilir.yilenelebilir
+# tuple => sıralı,degişmez, yinelenebılır
+# set=> sıralı degıl, degiştirilmez, yinlenemez
+# dictanıtory=> sıralanabılır, degişebilir, yenılenemez
+# append=> lsitenın sonuna item ekler
+# car = ["bmw","merc"]
+# car.append("volvo")
+# print(car)
+# insert=> belirli yere ekler
+# car.insert(1,"skoda")
+# print(car)
+# extend=> başka bir listeyi ekler, tupple dict set de eklenir
+# copy=>list=> ile abagımsız ve aynı liste oluşturur
+# remove=>pop=>(geriye dondurur sonra atar) listeden veriyi kadlırır ()=> itemin adını yaz ilkini sıler aynı varsa
+# del list[index] listeden oge siler
+# clear=> lissteyi boşaltır
+# index()=> itemin indexini dondurur
+# sort=>(key=str.lower=> b.k duyarlılı kalkar) afabetik ve b.kücüge sıralar
+# sort(reverse=true)=> b.kcuge zdena ya sıralar
+# sort(key=mysort(abs(x-20)))=> 20 ye yakınlık derecesıne gore sıralar
+# enumrate()=> key value gibi listeler
+
+# myNumbers = []
+# i=0
+# while(i<8):
+#     number = int(input("Enter a integer"))
+#     myNumbers.append(number)
+#     i+=1
+# print(myNumbers)
+
+# randomNum = random.randint(1,100)
+# i=0
+# print("--- Number Guessing Game ---")
+# while (i<10):
+#     userNumber = int(input("The number you guessed ="))
+#     if randomNum < userNumber:
+#         print("Guess the smaller number")
+#     elif randomNum > userNumber:
+#         print("Guess the larger number")
+#     else:
+#         print("Conguralations u got it right")
+#     i+=1
+# print(randomNum)
+
+# finding prime number
+
+# inputNumber = int(input("Enter a number"))
+# flag = True
+# if(inputNumber<0):
+#     print("pls enter a positive number")
+# for i in range(2,int(inputNumber**0.5)+1):
+#     if(inputNumber %i ==0):
+#         flag=False
+#         break
+# if(flag):
+#     print("number a prime")
+# else:
+#     print("number a not prime")
+
+# inputNumber = int(input("Enter a number"))
+# primeNumbers = []
+# primeNumbers.append(2)
+# flag = True
+# if(inputNumber<0):
+#     print("pls enter a positive number")
+# for i in range(3,inputNumber+1,2):
+#     for j in range(3,int(i**0.5)+1):
+#         if(i %j ==0):
+#             break
+#     else:
+#             primeNumbers.append(i)
+# print(primeNumbers)
+# OBEB OKEK
