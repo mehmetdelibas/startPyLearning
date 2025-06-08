@@ -210,34 +210,132 @@ import random
 #     print("My Last Name :"+lastname)
 # myLastName()
 
-def numbersWord(number):
-    ones = ["","bir","iki","üc","dort","bes","alti","yedi","sekiz","dokuz"]
-    tens = ["","on","yirmi","otuz","kırk","elli","altmış","yetmiş","seksen","doksan"]
-    if not 1000<=number <= 9999:
-        return "please enter a 4-digit number"
+# def numbersWord(number):
+#     ones = ["","bir","iki","üc","dort","bes","alti","yedi","sekiz","dokuz"]
+#     tens = ["","on","yirmi","otuz","kırk","elli","altmış","yetmiş","seksen","doksan"]
+#     if not 1000<=number <= 9999:
+#         return "please enter a 4-digit number"
     
-    oneDigit = number %10
-    tenDigit = (number // 10) %10
-    hunderedDigit = (number//100) %10
-    thousandDigit = number // 1000
-    resultt = ""
+#     oneDigit = number %10
+#     tenDigit = (number // 10) %10
+#     hunderedDigit = (number//100) %10
+#     thousandDigit = number // 1000
+#     resultt = ""
 
-    if thousandDigit>0:
-        if thousandDigit>1:
-            resultt+=f"{ones[thousandDigit]} bin "
-        else:
-            resultt+= "bin "
-    if hunderedDigit>0:
-        if hunderedDigit>1:
-            resultt+=f"{ones[hunderedDigit]} yüz "
-        else:
-            resultt+= "yüz "
-    if tenDigit>0:
-        resultt+= f"{tens[tenDigit]}"+" "
-    if oneDigit>0:
-        resultt+= f"{ones[oneDigit]}"
+#     if thousandDigit>0:
+#         if thousandDigit>1:
+#             resultt+=f"{ones[thousandDigit]} bin "
+#         else:
+#             resultt+= "bin "
+#     if hunderedDigit>0:
+#         if hunderedDigit>1:
+#             resultt+=f"{ones[hunderedDigit]} yüz "
+#         else:
+#             resultt+= "yüz "
+#     if tenDigit>0:
+#         resultt+= f"{tens[tenDigit]}"+" "
+#     if oneDigit>0:
+#         resultt+= f"{ones[oneDigit]}"
     
-    return resultt.strip()
+#     return resultt.strip()
 
-number = int(input("Enter a 4-digit number"))
-print(numbersWord(number))
+# number = int(input("Enter a 4-digit number"))
+# print(numbersWord(number))
+
+# def repeatFunc(string,num):
+#     for item in range(num):
+#         print(f"sunu yolladın {string}")
+
+# repeatFunc("Mehmet",6)
+
+# def areaAndRnvironment(leng,weight):
+#     print("area :",leng*weight)
+#     print("enviorement :", 2*(leng+weight))
+
+# areaAndRnvironment(5,3)
+
+# oran = random.randrange(0,2)
+# print(oran)
+# for item in 
+
+# open("log.txt","")
+# OOP()=> object oriatned programing
+
+# class Person:
+#     def __init__(self,n,a):
+#         self.name = n
+#         self.age = a
+#     def myInfo(self):
+#         print(f"my name {self.name}, my age : {self.age}")
+
+# class IdariPersonel(Person):
+#     pass
+# class AkademikPersonel(Person):
+#     pass
+# class Student(Person):
+#     def __init__(self, n, a,year):
+#         super().__init__(n, a)
+#         self.graudetinory = year
+#     def welcome(self):
+#         print("Welcomeee")
+
+
+# p1 = Student("Mehmet",23,2027)
+# p1.myInfo()
+# print(p1.graudetinory)
+# print(p1.name)
+# p1.welcome()
+# METHOD overriding
+
+# class Animal:
+#     def speak(self):
+#         return "Sound"
+# class Cat(Animal):
+#     def speak(self):
+#         return "Meow"
+# class Dog(Animal):
+#     def speak(self):
+#         return "Hav Hav"
+    
+# dog=Dog()
+# cat=Cat()
+# print(dog.speak())
+# print(cat.speak())
+# print(isinstance(dog,Animal))
+
+# class BankACcount:
+#     def __init__(self,number,balance):
+#         self.accountNumber=number
+#         self.__balance=balance
+
+#     def deposit(self,amount):
+#         if(amount>0):
+#             self.__balance+=amount
+#             return f"Deposited : {amount} New balance : {self.__balance}"
+#         return "Invalid deposit"
+#     def __display_balance(self):
+#         return f"Balance :{self.__balance}"
+#     def get_balance(self):
+#         return self.__display_balance()
+    
+# account = BankACcount("321321",200)
+# print(account.get_balance())
+
+class Vehicle:
+    def move(self):
+        return "This vehicle moves"
+class Car(Vehicle):
+    def move(self):
+        return "The car drives on the road"
+class Boat(Vehicle):
+    def move(self):
+        return "The boat sails on water"
+class Airplane(Vehicle):
+    def move(self):
+        return "The airplane fliees in the sky"
+class Bcylyce(Vehicle):
+    pass
+
+vehicles = [Car(),Bcylyce(),Airplane(),Boat()]
+for item in vehicles:
+    print(item.move())
