@@ -320,22 +320,109 @@ import random
     
 # account = BankACcount("321321",200)
 # print(account.get_balance())
+# Abstract class
 
-class Vehicle:
-    def move(self):
-        return "This vehicle moves"
-class Car(Vehicle):
-    def move(self):
-        return "The car drives on the road"
-class Boat(Vehicle):
-    def move(self):
-        return "The boat sails on water"
-class Airplane(Vehicle):
-    def move(self):
-        return "The airplane fliees in the sky"
-class Bcylyce(Vehicle):
-    pass
+# from abc import ABC,abstractmethod
 
-vehicles = [Car(),Bcylyce(),Airplane(),Boat()]
-for item in vehicles:
-    print(item.move())
+# class Shape(ABC):
+#     @abstractmethod
+#     def area(self):
+#         pass
+#     @abstractmethod
+#     def perimetre(self):
+#         pass
+
+# class Rectangle(Shape):
+#     def __init__(self,width,height):
+#         self.width=width
+#         self.height=height
+    
+#     def area(self):
+#         return self.width*self.height
+#     def perimetre(self):
+#         return 2*(self.width+self.height)
+    
+# rect =Rectangle(4,7)
+# print(rect.area())
+# print(rect.perimetre())
+
+# class Vehicle:
+#     def move(self):
+#         return "This vehicle moves"
+# class Car(Vehicle):
+#     def move(self):
+#         return "The car drives on the road"
+# class Boat(Vehicle):
+#     def move(self):
+#         return "The boat sails on water"
+# class Airplane(Vehicle):
+#     def move(self):
+#         return "The airplane fliees in the sky"
+# class Bcylyce(Vehicle):
+#     pass
+
+# vehicles = [Car(),Bcylyce(),Airplane(),Boat()]
+# for item in vehicles:
+#     print(item.move())
+
+# class Employes:
+#     def __init__(self,name,emp_id):
+#         self.name=name
+#         self.emp_id=emp_id
+# class Department:
+#     def __init__(self,name_dp):
+#         self.name_dp=name_dp
+#         self.employees=[]
+
+#     def add_employee(self,employe):
+#         self.employees.append(employe)
+
+#     def show_department(self):
+#         print(f"Department : {self.name_dp}")
+#         for item in self.employees:
+#             print(f"Employees : {item.name}, ID:{item.emp_id}")
+
+# e1=Employes("mehmet metin",23)
+# e2=Employes("eren türkoglu",21)
+
+# dept=Department("software development")
+
+# dept.add_employee(e1)
+# dept.add_employee(e2)
+# dept.show_department()
+
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+# class School:
+#     def __init__(self, name):
+#         self.name = name
+#         self.students = []
+
+#     def add_student(self, student):
+#         self.students.append(student)
+# s1 = Student("Ahmet")
+# s2 = Student("Ayşe")
+
+# my_school = School("Anadolu Lisesi")
+# my_school.add_student(s1)
+# my_school.add_student(s2)
+
+# for item in range(0,2):
+#     print(my_school.students[item].name)
+
+# # File Handling
+
+# with open("fileTest/demo.txt","r",encoding="utf-8") as f:
+#     print(f.read())
+# print(f.closed)
+# f.close()
+# import os
+
+# os.mkdir("C:\\Users\\Mertcan\Masaüstü\\PythonLearn\\basicTerms\\newFolders")
+# os.rmdir("newFolders")
+# print(os.listdir())
+# fruits=["grape\n","strawberry\n","banana\n"]
+# with open("fileTest/newFile.txt","a+",encoding="utf-8") as f:
+#     f.writelines(fruits)
+#     f.flush()
