@@ -1,2 +1,2 @@
-Mehmet Metin,Delibaş,12341234123
-İsa,Delibaş,233214152
+Metin,Delibaş,12341234123
+Ahmet,Delibaş,233214152
