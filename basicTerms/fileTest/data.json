@@ -1,0 +1,10 @@
+{
+    "name": "Metin",
+    "age": 23,
+    "city": "İstanbul ",
+    "hobbies": [
+        "kodlama",
+        "müzik",
+        "spor"
+    ]
+}
